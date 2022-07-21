@@ -24,9 +24,10 @@
     Un Anello per ghermirli e nel buio incatenarli,<br>
     Nella Terra di Mordor, dove l'Ombra cupa scende.";
     $textLegth = strlen($longText);
-    $redactedText = str_replace("Anello", "***", $longText);
     $redactedTextLegth = strlen($redactedText);
-    // $redacted = $_GET["name"];
+    // assumendo che l'URL sia http://localhost:8888/php-badwords/?name=Anello
+    $redacted = $_GET["name"];
+    $redactedText = str_replace($redacted, "***", $longText);
     ?>
 
     <!-- stampa del paragrafo originale con conteggio parole -->
