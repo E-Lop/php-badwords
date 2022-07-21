@@ -24,10 +24,21 @@
     Un Anello per ghermirli e nel buio incatenarli,<br>
     Nella Terra di Mordor, dove l'Ombra cupa scende.";
     $textLegth = strlen($longText);
+    $redactedText = str_replace("Anello", "***", $longText);
+    $redactedTextLegth = strlen($redactedText);
+    // $redacted = $_GET["name"];
     ?>
 
+    <!-- stampa del paragrafo originale con conteggio parole -->
     <h2>Testo originale:</h2>
-    <div>Lunghezza paragrafo: <?php echo $textLegth ?> parole</div>
+    <div>Lunghezza paragrafo: <?php echo $textLegth ?> caratteri</div>
     <p><?php echo $longText ?></p>
+
+    
+
+    <!-- stampa del paragrafo modificato con conteggio parole -->
+    <h2>Testo modificato:</h2>
+    <div>Lunghezza paragrafo: <?php echo $redactedTextLegth ?> caratteri</div>
+    <p><?php echo $redactedText ?></p>
 </body>
 </html>
